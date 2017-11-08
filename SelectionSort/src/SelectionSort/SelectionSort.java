@@ -10,15 +10,15 @@ package SelectionSort;
  * @author vince
  */
 public class SelectionSort {
-    public static void selectionSort(int[] a){
+    public static<E extends Comparable<E>> void selectionSort(E[] a){
         for(int i=0; i < a.length-1; i++){
             int min = i;
             for(int j = i+1; j < a.length; j++){
-                if( a[min] > a[j]){
+                if( a[min].compareTo(a[j]) > 0){
                     min = j;
                 }
             }
-            int temp = a[i];
+            E temp = a[i];
             a[i] = a[min];
             a[min] = temp;
         }
