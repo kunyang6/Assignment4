@@ -23,4 +23,20 @@ public class BubbleSort {
         }
     }
     
+    public static void bubbleSort2(int[] a){
+        boolean sorted = true;
+        int arraySize = 0;
+        while(sorted){
+            sorted = false;
+            for(int i = 1; i < a.length-arraySize; i++){
+                if(a[i-1] > a[i]){
+                    int temp = a[i-1];
+                    a[i-1] = a[i];
+                    a[i] = temp;
+                    sorted = true;
+                }
+            }
+            arraySize++;
+        }
+    }
 }

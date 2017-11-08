@@ -12,7 +12,22 @@ package Bubblesort2;
 public class bubbleSortTest {
     public static void test(){
         int[] test = {5,2,7,3,4,9,10,8,1};
+        sorting(test);
+        int[] test2 = {5,2,7,3,4,9,10,8,1};
+        secondSorting(test2);
+    }
+    
+    public static void sorting(int[] test){
         BubbleSort.bubbleSort(test);
+        System.out.print("{" + test[0]);
+        for(int i = 1; i < test.length-1; i++){
+            System.out.print(","+ test[i]);
+        }
+        System.out.print("," + test[test.length-1] + "}");
+    }
+    
+    public static void secondSorting(int[] test){
+        BubbleSort.bubbleSort2(test);
         System.out.print("{" + test[0]);
         for(int i = 1; i < test.length-1; i++){
             System.out.print(","+ test[i]);
