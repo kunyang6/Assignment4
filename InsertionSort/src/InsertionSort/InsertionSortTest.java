@@ -11,12 +11,12 @@ package InsertionSort;
  */
 public class InsertionSortTest {
     public static void test(){
-        int[] test1 = {3,5,2,7,1,6,4};
+        Integer[] test1 = {3,5,2,7,1,6,4};
         InsertionSort.insertionSort(test1);
         print(test1);
     }
     
-    public static void print(int[] test){
+    public static <E extends Comparable<E>> void print(E[] test){
         System.out.print("{" + test[0]);
         for(int i = 1; i < test.length-1; i++){
             System.out.print("," + test[i]);
