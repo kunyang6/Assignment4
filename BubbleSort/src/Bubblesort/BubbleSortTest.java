@@ -3,21 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Bubblesort2;
+package Bubblesort;
 
 /**
  *
  * @author vince
  */
-public class bubbleSortTest {
+public class BubbleSortTest {
     public static void test(){
-        int[] test = {5,2,7,3,4,9,10,8,1};
+        Integer[] test = {5,2,7,3,4,9,10,8,1};
         sorting(test);
-        int[] test2 = {5,2,7,3,4,9,10,8,1};
+        Integer[] test2 = {5,2,7,3,4,9,10,8,1};
         secondSorting(test2);
     }
     
-    public static void sorting(int[] test){
+    public static <E extends Comparable<E>> void sorting(E[] test){
         BubbleSort.bubbleSort(test);
         System.out.print("{" + test[0]);
         for(int i = 1; i < test.length-1; i++){
@@ -26,7 +26,7 @@ public class bubbleSortTest {
         System.out.print("," + test[test.length-1] + "}");
     }
     
-    public static void secondSorting(int[] test){
+    public static<E extends Comparable<E>> void secondSorting(E[] test){
         BubbleSort.bubbleSort2(test);
         System.out.print("{" + test[0]);
         for(int i = 1; i < test.length-1; i++){
