@@ -23,6 +23,7 @@ public class MergeSort {
             //fiding the mid point
             int mid = n / 2;
             //cutting the array into two parts, based on the piviot point mid
+            //
             int[] left = new int[mid];
             int[] right = new int[n-mid];
             
