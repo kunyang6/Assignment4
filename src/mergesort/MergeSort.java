@@ -15,7 +15,7 @@ public class MergeSort {
     /*
     mergeSort
     */
-    public static void mergeSort(int[] a){
+    public static<E extends Comparable<E>> void mergeSort(E[] a){
         int n = a.length;
         //cutting the array into smaller parts, if the array is less than or equal to one
         //the recursion will not run, hence ending the sorting
@@ -24,8 +24,8 @@ public class MergeSort {
             int mid = n / 2;
             //cutting the array into two parts, based on the piviot point mid
             //
-            int[] left = new int[mid];
-            int[] right = new int[n-mid];
+            E[] left = (E[])new Comparable[mid];
+            E[] right = (E[])new Comparable[n-mid];
             
             //assign the left and right array witht the contents from the original array
             for(int i = 0; i < mid; i++){
@@ -47,7 +47,7 @@ public class MergeSort {
     /*
     merging two arrays
     */
-    public static void merge(int[] left,int[] right,int[] a){
+    public static <E extends Comparable<E>>void merge(E[] left,E[] right,E[] a){
         int mA = left.length;
         int mB = right.length;
         int i = 0;
@@ -56,7 +56,7 @@ public class MergeSort {
         
         //assign the smallest contents from left or right array into the original array
         while(i < mA && j < mB){
-            if(left[i] <= right[j]){
+            if(left[i].compareTo(right[j]) < 0){
                 a[k] = left[i];
                 i = i + 1;
             } else {

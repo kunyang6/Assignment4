@@ -14,7 +14,7 @@ public class MergeSortTest {
      * test cases
      */
     public static void test(){
-        int[] test = {9,10,3,5,1,15,6,12,11,7,14,4,2,13,8};
+        Integer[] test = {9,10,3,5,1,15,6,12,11,7,14,4,2,13,8};
         MergeSort.mergeSort(test);
         //printing
         System.out.println(test.length);
@@ -25,7 +25,7 @@ public class MergeSortTest {
      * print array
      * @param test 
      */
-    public static void printArray(int[] test){
+    public static <E extends Comparable<E>> void printArray(E[] test){
         System.out.print("{" + test[0]+ ",");
         for(int i = 1; i < test.length - 1; i++){
             System.out.print(test[i] + ",");
