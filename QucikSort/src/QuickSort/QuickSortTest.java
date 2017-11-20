@@ -11,8 +11,8 @@ package QuickSort;
  */
 public class QuickSortTest {
     public static void test(){
-        Integer[] test = {7,2,1,6,8,5,3,4};
-        QuickSort.quickSort(test, 0, test.length);
+        Integer[] test = {7, 7,2,1,6,8,5,3,4};
+        QuickSort.quickSort(test, 0, test.length - 1);
         printArray(test);
     }
     
