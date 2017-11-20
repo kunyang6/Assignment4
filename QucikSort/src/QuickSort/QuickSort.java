@@ -11,23 +11,23 @@ package QuickSort;
  */
 public class QuickSort {
     public static <E extends Comparable<E>> int partition(E[] a, int start, int end){
-        E pivot = a[end-1];
-        int pIndex = start;
-        for(int i = start; i < end - 1 ; i++){
+        E pivot = a[end];
+        int pIndex = start - 1;
+        for(int i = start; i < end; i++){
             if(a[i].compareTo(pivot)<0 || a[i].compareTo(pivot) == 0){
+                pIndex++;
                 swap(a,i,pIndex);
-                pIndex ++;
             }
         }
-        swap(a,pIndex,end-1);
-        return pIndex;
+        swap(a,pIndex + 1,end);
+        return pIndex + 1;
     }
     
     public static <E extends Comparable<E>> void quickSort(E[] a, int start , int end){
         if(start < end){
             int pIndex = partition(a,start,end);
             quickSort(a, start, pIndex-1);
-            quickSort(a, pIndex+1, end);
+            quickSort(a, pIndex + 1, end);
         }
     }
     
