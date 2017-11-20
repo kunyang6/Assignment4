@@ -56,7 +56,7 @@ public class MergeSort {
         
         //assign the smallest contents from left or right array into the original array
         while(i < mA && j < mB){
-            if(left[i].compareTo(right[j]) < 0){
+            if(left[i].compareTo(right[j]) < 0 || left[i].compareTo(right[j]) == 0){
                 a[k] = left[i];
                 i = i + 1;
             } else {
